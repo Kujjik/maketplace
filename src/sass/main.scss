@@ -1,0 +1,39 @@
+$back-page-color: #303030;
+
+
+body {
+    display: flex;
+    justify-content: center;    
+}
+
+.page {
+    background-color: $back-page-color;
+    width: 1150px;
+    height: 2260px;
+}
+
+.header {
+    display: flex;
+    width: 1000px;
+    height: 58px;
+    margin: 0 auto;
+}
+
+.header-contaner{
+    margin: 0 30px;
+    display: flex;
+    color: red;
+    width: 100%;
+    height: 58px;
+    justify-content: center;
+    
+}
+
+.logo {
+    background-image: url(/src/image/header-logo.jpg);
+
+}
+
+.search {
+    background-image: url(/src/image/header-logo.jpg);
+}
