@@ -20,8 +20,8 @@ module.exports = {
                 exclude: /node_modules/,
                 use: 'babel-loader'
             },
-            {
-                test: /\.(png|jpg|gif|json|xml|ico|svg)$/,
+            /*{
+               test: /\.(png|jpg|gif|json|xml|ico|svg)$/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -32,7 +32,7 @@ module.exports = {
                         }
                     }
                 ]
-            },
+            }*/,
             {
                 test: /\.(sass|scss)$/,
                 use: [{
@@ -60,11 +60,11 @@ module.exports = {
         }),
         new webpack.HotModuleReplacementPlugin(),
 
-        new CopyPlugin({
+       /* new CopyPlugin({
             patterns: [
               { from: "src/image", to: "assets" },
             ],
-          }),
+          }),*/
     ],
     devServer: {
         static: {
