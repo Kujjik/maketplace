@@ -4,8 +4,9 @@ $search-font: "Franklin Gothic";
 
 body {
     display: flex;
-    justify-content: center; 
-    margin: 0 auto;   
+    justify-content: center;
+    margin: 0 auto;
+    background: url('./../assets/image/search.jpg');
 }
 
 
@@ -26,7 +27,7 @@ body {
 .logo {
     width: 671px;
     height: 58px;
-    background-image: url(/src/image/header-logo.jpg);
+    background-image: url('./../assets/image/header-logo.jpg');
     background-repeat: no-repeat;
 }
 

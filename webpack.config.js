@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 
 let mode = 'development'
@@ -11,28 +11,30 @@ if (process.env.NODE_ENV === "production") {
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: {
+        filename: path.resolve (__dirname, 'src/index.js')
+    },
     module: {
         rules: [
-            { test: /\.svg$/, use: 'svg-inline-loader' },
+            {test: /\.svg$/, use: 'svg-inline-loader'},
             {
                 test: /\.(js)$/,
                 exclude: /node_modules/,
                 use: 'babel-loader'
             },
-            /*{
-               test: /\.(png|jpg|gif|json|xml|ico|svg)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'assets/',
-                            publicPath: '/'
-                        }
-                    }
-                ]
-            }*/,
+            // {
+            //     test: /\.(png|jpg|gif|json|xml|ico|svg)$/,
+            //     use: [
+            //         {
+            //             loader: 'file-loader',
+            //             options: {
+            //                 name: '[name].[ext]',
+            //                 outputPath: 'assets/',
+            //                 publicPath: '/'
+            //             }
+            //         }
+            //     ]
+            // },
             {
                 test: /\.(sass|scss)$/,
                 use: [{
@@ -43,7 +45,7 @@ module.exports = {
                     loader: "sass-loader" // compiles Sass to CSS
                 }]
             },
-            { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] }
+            // {test: /\.css$/, use: ['style-loader', 'css-loader']}
         ],
     },
     output: {
@@ -60,18 +62,18 @@ module.exports = {
         }),
         new webpack.HotModuleReplacementPlugin(),
 
-       /* new CopyPlugin({
+        new CopyPlugin({
             patterns: [
-              { from: "src/image", to: "assets" },
+                {from: "src/assets/image", to: "assets"},
             ],
-          }),*/
+        }),
     ],
     devServer: {
         static: {
             directory: path.join(__dirname, '/dist'),
         },
         liveReload: true,
-        hot: true,
+        hot: false,
         compress: false,
         port: 9009,
     },
