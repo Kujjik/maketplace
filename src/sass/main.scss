@@ -19,8 +19,8 @@ body {
 .header {
     display: flex;
     width: 1000px;
-    height: 58px;
-    margin: 30px auto;
+    height: 57px;
+    margin: 30px auto 0;
 }
 
 .logo {
@@ -38,9 +38,12 @@ body {
 }
 
 .search-text{
-    padding: 16px 2px;
-    font-size: 20px;
+    padding: 20px 4px;
+    font-size: 15px;
     font-family: $search-font;
+    font-size: bold;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
 .search {

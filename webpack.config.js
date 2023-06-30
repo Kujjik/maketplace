@@ -14,13 +14,17 @@ module.exports = {
     entry: './src/index.js',
     module: {
         rules: [
-            { test: /\.svg$/, use: 'svg-inline-loader' },
+            { test: /\.svg$/, 
+            use: 'svg-inline-loader' 
+            },
+
             {
                 test: /\.(js)$/,
                 exclude: /node_modules/,
                 use: 'babel-loader'
             },
-            /*{
+
+           /* {
                test: /\.(png|jpg|gif|json|xml|ico|svg)$/,
                 use: [
                     {
@@ -32,7 +36,8 @@ module.exports = {
                         }
                     }
                 ]
-            }*/,
+            },*/
+
             {
                 test: /\.(sass|scss)$/,
                 use: [{
@@ -43,7 +48,10 @@ module.exports = {
                     loader: "sass-loader" // compiles Sass to CSS
                 }]
             },
-            { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] }
+
+            {   test: /\.css$/, 
+                use: [ 'style-loader', 'css-loader'] 
+            }
         ],
     },
     output: {
