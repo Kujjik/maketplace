@@ -71,6 +71,18 @@ body {
     background: #ffffff;
 }
 
+.article-container {
+    display: flex;
+    flex-direction: column;
+    height: 730px;
+    width: 670px;
+}
+
+.article-header {
+    display: flex;
+    flex-direction: row;
+}
+
 .article-img {
     margin: 35px 5px 0 20px;
     width: 210px;
@@ -79,14 +91,14 @@ body {
     background-repeat: no-repeat;
 }
 
-.article-text-container {
+.article-h3-container {
     width: 415px;
     height: 235px;
     padding: 4px;
     margin: 4px;
 }
 
-.link-page-header {
+.nav-link {
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -109,7 +121,7 @@ body {
     margin: 20px 0 5px 0;
 }
 
-.page-link-text:not(:last-child):after {
+.nav-style:not(:last-child):after {
     content: "/";
     padding: 5px;
     font-size: $font-size-link-header;
@@ -130,5 +142,11 @@ body {
 .article-text {
     padding: 10px;
     font-size: $font-size-text-article;
+
+}
+
+.main-content {
+    margin: 5px;
+    padding: 10px;
 
 }
