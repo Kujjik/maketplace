@@ -1,13 +1,18 @@
-$back-page-color: #101010;
+$back-page-color: #303030;
 $search-font: "Franklin Gothic";
 $font-size-link-header: 10px;
 $font-style: "Arial";
 $font-link-color: #2884b5;
-$font-size-text-article: 13px;
+$font-size-text-article: 14px;
 $font-navigation-size: 25px;
 $sider-back-color: #e7e4e3;
 $side-border-color: #c5c2c1;
-
+$right-nav-menu-color:  #444444;
+$footer-back-color: #101010;
+$footer-border-color: #191919;
+$footer-link-color: #2884b5;
+$footer-text-color: #666666;
+$footer-h2-color: #cccccc;
 
 body {
     display: flex;
@@ -20,14 +25,22 @@ body {
 .page {
     background-color: $back-page-color;
     width: 1150px;
-    height: 2260px;
+    height: 2250px;
+}
+
+.background-header {
+    display: flex;
+    width: 1150px;
+    height: 80px;
+    align-items: end;
+    background-color: #000000;
 }
 
 .header {
     display: flex;
-    width: 1000px;
+    width: 1010px;
     height: 57px;
-    margin: 30px auto 0;
+    margin: 0 auto;
 }
 
 .logo {
@@ -62,6 +75,14 @@ body {
     padding: 1px;
 }
 
+.search::placeholder {
+    padding: 20px;
+    background-image: url(/dist/assets/search.jpg);
+    background-repeat: no-repeat;
+    background-position-x: 185px;
+    background-position-y: 17px ;
+}
+
 
 //contents on the page
 .content-page {
@@ -69,7 +90,7 @@ body {
     flex-direction: row;
     color: #000000;
     margin: 0 auto;
-    width: 1000px;
+    width: 1010px;
     height: 1600px;
     background: #ffffff;
 }
@@ -77,8 +98,10 @@ body {
 .article-container {
     display: flex;
     flex-direction: column;
-    height: 730px;
+    height: 100%;
     width: 670px;
+    font-family: $font-style;
+    font-size: $font-size-text-article;
 }
 
 .article-header {
@@ -138,8 +161,6 @@ body {
 
 .article-text {
     padding: 10px;
-    font-size: $font-size-text-article;
-
 }
 
 .main-content {
@@ -199,14 +220,14 @@ body {
 
 //sidebar 
 .sidebar {
-    width: 100%;
+    width: 340px;
     height: 100%;
     display: flex;
     flex-direction: column;
     border-left: solid;
     background-color: $sider-back-color;
     border-color: $side-border-color;
-
+    border-width: 1px;
 }
 
 .sub-feed {
@@ -218,8 +239,7 @@ body {
     align-items: center;
     border-bottom: solid;
     border-color: $side-border-color;
-
-
+    border-width: 1px;
 }
 
 .sub-feed-text {
@@ -242,6 +262,7 @@ body {
     align-items: center;
     border-bottom: solid;
     border-color: $side-border-color;
+    border-width: 1px;
 }
 
 .link-banners-container {
@@ -301,13 +322,16 @@ body {
     background-color: #ffffff;
     border: solid;
     border-color: $side-border-color;
+    border-width: 1px;
 }
 
 .tabs-container {
     display: flex;
     height: 50px;
     width: 100%;
-
+    font-family: $font-style;
+    font-size: 14px;
+    color: $right-nav-menu-color;
 }
 
 .tabs {
@@ -320,38 +344,46 @@ body {
     height: 100%;
     background-color: $sider-back-color;
     padding: 5px;
+    color: inherit;
 }
 
 .categories {
     background-color: #ffffff;
+    font-weight: bold;
 }
 
 .archives {
     border-left: solid;
     border-bottom: solid;
+    border-width: 1px;
     border-color: $side-border-color;
 }
 
 .pages {
     border-bottom: solid;
     border-color: $side-border-color;
+    border-width: 1px;
 }
 
 .popular {
     border-bottom: solid;
     border-color: $side-border-color;
+    border-width: 1px;
 }
 
 .archives:hover{
     background-color: #ffffff;
+    font-weight: bold;
 }
 
 .pages:hover{
     background-color: #ffffff;
+    font-weight: bold;
 }
 
 .popular:hover{
     background-color: #ffffff;
+    font-weight: bold;
 }
 
 .categories-container {
@@ -369,7 +401,8 @@ body {
     width: 100%;
     margin: 10px 5px;
     border-bottom: solid;
-
+    border-width: 1px;
+    opacity: 0.65;
 }
 
 .page-number {
@@ -378,6 +411,8 @@ body {
     width: 130px;
     margin: 10px 5px;
     border-bottom: solid;
+    border-width: 1px;
+    opacity: 0.65;
 }
 
 .nikon-advertisement {
@@ -386,5 +421,123 @@ body {
     width: 100%;
     height: 372px;
     background-position-x:  24px;
-    background-position-y: 30px;
+    background-position-y: 40px;
+}
+
+
+//Footer
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    width: 1010px;
+    margin: 0 auto;
+    background-color: $footer-back-color;
+} 
+
+.footer-information {
+    width: 336px;
+    height: 100%;
+    margin: 30px 10px;
+    font-family: $font-style;
+    color: #ffff;
+}
+
+.footer-h2-text {
+    padding-left: 40px;
+    margin: 10px;
+    color: $footer-h2-color;
+}
+
+.icon-twitter {
+    background-image: url(/dist/assets/twitter-iocn.jpg);
+    background-repeat: no-repeat;
+}
+
+.icon-write {
+    background-image: url(/dist/assets/write-icon.jpg);
+    background-repeat: no-repeat;
+}
+
+.icon-about-us {
+    background-image: url(/dist/assets/about-icon.jpg);
+    background-repeat: no-repeat;
+}
+
+
+.icon-friends {
+    background-image: url(/dist/assets/friends-icon.jpg);
+    background-repeat: no-repeat;
+}
+
+.twitter-updade-text {
+    margin: 10px 5px;
+    padding: 10px 5px;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: $footer-border-color;
+    color: $footer-text-color;
+}
+
+.footer-link-contaner {
+    margin: 10px 5px;
+    padding: 10px 5px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: $footer-link-color;
+}
+
+.footer-information-text {
+    margin: 10px 5px;
+    padding: 10px 5px;
+    border-color: $footer-border-color;
+    color: $footer-text-color;
+} 
+
+.freinds {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+
+.friends-link {
+    width: 100%;
+    padding: 10px;
+    border-bottom: solid;
+    border-color: $footer-border-color;
+    border-width: 1px;
+    text-decoration: none;
+    color: $footer-link-color;
+}
+
+//Footer copyright
+
+.footer-copyright {
+    display: flex;
+    flex-direction: row;
+    width: 1010px;
+    background-color: #000000;
+    margin: 0 auto;
+    color: $footer-text-color;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+}
+
+.powered-theme {
+    display: flex;
+    flex-direction: row;
+}
+
+.copyright {
+    margin: 20px;
+}
+.powered-theme-container {
+    margin: 20px;
+}
+.footer-copyright-link {
+    color: $footer-link-color;
+    text-decoration: none;
 }
