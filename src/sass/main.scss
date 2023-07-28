@@ -57,7 +57,7 @@ body {
     width: 100%;
 }
 
-.search-text{
+.search-text {
     padding: 20px 4px 20px 25px;
     font-size: 15px;
     font-family: $search-font;
@@ -274,6 +274,7 @@ body {
     background-repeat: no-repeat;
     margin:  10px 15px 10px 15px;
 }
+
 .BH {
     background-image: url(/dist/assets/B&H-sidebar.jpg);
 }
@@ -422,6 +423,7 @@ body {
     background-position-x:  24px;
     background-position-y: 40px;
 }
+
 .nikon {
     width: 100%;
     height: 372px;
@@ -546,7 +548,7 @@ body {
 }
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1370px) {
 
     //HEADER
     .page {
@@ -717,7 +719,7 @@ body {
 }
 
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1050px) {
 
     .page {
         width: 685px;
@@ -801,25 +803,24 @@ body {
 
     }
 
+    //footer
 
+    .footer-container {
+        width: 683px;
+        margin: 0;
+        padding: 0;
+    }
 
-//footer
-
-.footer-container {
-    width: 683px;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-copyright {
-    width: 685px;
-    margin: 0;
-    padding: 0;
-}
+    .footer-copyright {
+        width: 685px;
+        margin: 0;
+        padding: 0;
+    }
 
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 770px) {
+
     .page {
         width: 350px;
         height: 100%;
@@ -844,7 +845,21 @@ body {
         width: 130%;
     }
 
+    .nikon-advertisement {
+
+        background-position-x: 90px;
+        background-position-y: 35px;
     
+    }
+
+    .article-img {
+        margin: 35px 5px 0 20px;
+        width: 85px;
+        height: 75px;
+        background-image: url(/src/image/page-image50x50.jpg);
+        background-repeat: no-repeat;
+    }
+
     .search::placeholder {
         padding: 20px;
         background-image: url(/dist/assets/search.jpg);
@@ -874,7 +889,32 @@ body {
         flex-direction: column;
     }
 
+    .footer-information {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-h2-text {
+        height: 30px;
+    }
+
+    .footer-position-350px {
+        flex-direction: column;
+        width: 180px;
+        margin-left: 75px;
+    }
+
     .footer-copyright {
         width: 350px;
+    }
+
+    .freinds {
+        padding: 0;
+        width: 180px;
+    }
+
+    .twitter {
+        width: 200px;
     }
 }
